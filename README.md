@@ -16,3 +16,6 @@ Locations can be filtered by entering text in the **Search** textbox.
 * MediaWiki API (Wikipedia)
   
 ## Sources
+* Udacity Google Maps APIs Course
+* W3Schools
+* Libraries' and APIs' documentation
