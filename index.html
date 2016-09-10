@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial scale=1">
+	<title>Neighbourhood Map</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<header>
+	<div class="nav-button" data-bind="click: changeNav">Locations</div>
+</header>
+
+<div class="container">
+	<div class="navigation" data-bind="visible: navVisible">
+		<div class="search-form">
+			<div class="my-label">Search:</div>
+			<input data-bind="textInput: searchInput">
+		</div>
+
+		<div data-bind="foreach: markers">
+			<div class="row" data-bind="visible: getVisible, text: title, click: $parent.markerClick"></div>
+		</div>
+	</div>
+	<div id="map" class="map-style"></div>
+</div>
+
+<!-- THE SCRIPTS -->
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/knockout-3.2.0.js"></script>
+<script src="js/app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+
+</body>
+</html>
